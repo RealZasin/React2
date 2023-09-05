@@ -1,37 +1,14 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import myLogo from './assets/portfolioLogo.png'
-import './App.css'
+import "./App.css";
+import MenuCard from "./components/MenuCard"
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App(properties) {
+  const { name, imageUrl, decription, recipe } = properties;
 
   return (
-    <>
-      <div>
-        <img src={myLogo} className="my logo" alt="a logog made out of the letters EB" />
-        {/* <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
-      </div>
-      <h1>Blog Post by EirBec.kodehode</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <MenuCard
+      name="Garlic lemon chicken"
+      description="Garlic lemon chicken is a delicious dish that consists of chicken pieces marinated in a mixture of lemon juice, garlic, salt, pepper, and herbs. The chicken is then cooked in a skillet or oven until golden and tender. The dish is usually served with rice, potatoes, or salad, and garnished with more lemon wedges and parsley. Garlic lemon chicken is a popular choice for a quick and easy weeknight meal or a special occasion ."
+      imageUrl="https://life-in-the-lofthouse.com/wp-content/uploads/2017/06/Lemon-Garlic-Chicken-and-Veggies2.jpg"
+    />
+  );
 }
-
-export default App
